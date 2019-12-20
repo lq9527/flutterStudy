@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/lq/work/flutterProject/flutterStudy/flutter666/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/lq/work/githupCode/flutterStudy/flutter666/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml",
+            "outputFile": "/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml",
             "map": [
                 {
                     "source": "/Users/lq/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/c649a06c503a121f14960bf1b45f0d66/res/values-sk/values-sk.xml",

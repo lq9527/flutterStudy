@@ -1,7 +1,7 @@
-#Fri Dec 20 19:24:25 CST 2019
-base.2=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/3
-base.1=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/8
-base.0=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/5
+#Fri Dec 20 20:14:30 CST 2019
+base.2=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/7
+base.1=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/10
+base.0=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/4
 path.9=classes.dex
 path.8=classes.dex
 path.7=classes.dex
@@ -25,13 +25,13 @@ renamed.0=classes.dex
 renamed.11=classes12.dex
 renamed.10=classes11.dex
 path.11=classes.dex
-base.11=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/2
+base.11=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/5
 path.10=classes.dex
-base.10=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/4
-base.9=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/1
-base.8=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/11
-base.7=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/0
-base.6=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/10
-base.5=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/7
-base.4=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/9
-base.3=/Users/lq/work/flutterProject/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/6
+base.10=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/2
+base.9=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/3
+base.8=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/0
+base.7=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/1
+base.6=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/8
+base.5=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/11
+base.4=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/9
+base.3=/Users/lq/work/githupCode/flutterStudy/flutter666/build/app/intermediates/transforms/dexMerger/debug/6
