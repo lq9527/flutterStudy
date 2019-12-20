@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter666/utils/MyImage.dart';
 
 class Page_UI extends StatelessWidget {
   @override
@@ -40,7 +41,15 @@ class _MySecondPageState extends State<SecondHomePage> {
                   child: new Text('Dump App(渲染树'),
                 ),
                 const Text('A', textDirection: TextDirection.rtl),
-                const Text('C'),
+                Column(
+                  children: <Widget>[
+                    MyImage(
+                      imageProvider: NetworkImage(
+                        "https://avatars2.githubusercontent.com/u/20411648?s=460&v=4",
+                      ),
+                    )
+                  ],
+                )
               ])))
         ]));
   }
