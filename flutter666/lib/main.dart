@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter666/page/RenderObjectPage.dart';
 import 'package:flutter666/page_async.dart';
 import 'package:flutter666/page_dart_study.dart';
+import 'package:flutter666/page_lifecyle.dart';
 import 'package:flutter666/page_ui.dart';
 import 'package:flutter666/redus/main_redux.dart';
 import 'package:flutter666/redus/states/count_state.dart';
@@ -21,6 +22,7 @@ import 'net.dart';
 
 void main() => runApp(MyApp());
 var funcList = [
+  '生命周期（widget、state）',
   'Redux',
   'RenderObjectPage',
   '自定义View',
@@ -35,11 +37,71 @@ var funcList = [
   '盒约束',
   '手势',
   '网络',
-  'xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx',
-  'xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx',
-  'xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx',
-  'xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx',
-  'xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx','xxx'
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx',
+  'xxx'
 ];
 var funcListSize = funcList.length;
 
@@ -73,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: new ListView.builder(
         padding: new EdgeInsets.all(5.0),
-        itemExtent: 75,//TODO 75 ?
+        itemExtent: 75, //TODO 75 ?
         itemBuilder: (BuildContext context, int index) {
           return (new FlatButton(
               onPressed: () => _itemClick(index),
@@ -206,9 +268,19 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       case 'Redux':
         {
-          final store = Store<CountState>(
-              reducer, initialState: CountState.initState());
+          final store =
+              Store<CountState>(reducer, initialState: CountState.initState());
           runApp(new MyReduxApp(store));
+          break;
+        }
+      case '生命周期（widget、state）':
+        {
+          Navigator.push(
+            context,
+            new MaterialPageRoute(
+              builder: (context) => new Page_LifeCycle(),
+            ),
+          );
           break;
         }
     }
@@ -246,5 +318,4 @@ class _MyHomePageState extends State<MyHomePage> {
     print(await battery.batteryLevel);
     print('_plugin of battery');
   }
-
 }
