@@ -61,9 +61,9 @@ class _MySecondPageState extends State<SecondHomePage> {
     print('LifeCycle state build：${this.hashCode}');
     GlobalKey key = new GlobalKey();
     return new MyMaterialButton(
-      key: key/*Key('*****')*/,
-      color: Colors.blue,
-      textColor: Colors.white,
+      key: key /*Key('*****')*/,
+      color: Color(Random().nextInt(0xffffff) + 0xff000000),
+      textColor: Color(Random().nextInt(0xffffff) + 0xff000000),
       child: new Text('${text}${this.hashCode}${key}'),
       onPressed: () {
         print('onPress');
@@ -76,9 +76,9 @@ class _MySecondPageState extends State<SecondHomePage> {
 
   @override
   void didUpdateWidget(SecondHomePage oldWidget) {
+    super.didUpdateWidget(oldWidget);
     // TODO: implement didUpdateWidget
     print('LifeCycle state didUpdateWidget：${this.hashCode}');
-    super.didUpdateWidget(oldWidget);
   }
 
   @override
@@ -122,11 +122,5 @@ class MyMaterialButton extends MaterialButton {
     print('widget createElement：${this.hashCode}:key=${key}');
     // TODO: implement createElement
     return super.createElement();
-  }
-
-  @override
-  _MySecondPageState createState() {
-    print('widget createState：${this.hashCode}');
-    return _MySecondPageState();
   }
 }

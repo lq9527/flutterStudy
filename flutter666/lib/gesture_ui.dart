@@ -42,11 +42,11 @@ class _MySecondPageState extends State<SecondHomePage> {
                   })
                 }),
         Container(
-            width: 50,
-            height: 50,
-            margin: EdgeInsets.fromLTRB(_x, _y, 0, 0),
-            decoration: new BoxDecoration(
-              color: Colors.blue,
+        width: 50,
+        height: 50,
+        margin: EdgeInsets.fromLTRB(_x, _y, 0, 0),
+        decoration: new BoxDecoration(
+          color: Colors.blue,
             )),
       ],
     );
