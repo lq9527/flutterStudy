@@ -15,14 +15,18 @@ import 'package:flutter666/second_page.dart';
 import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'HomeClipPage.dart';
 import 'animation.dart';
 import 'custom_painter.dart';
 import 'gesture_ui.dart';
+import 'hero/basic_structure_hero.dart';
 import 'layout_ui.dart';
 import 'net.dart';
 
 void main() => runApp(MyApp());
 var funcList = [
+  'Hero动画',
+  '贝塞尔曲线',
   '生命周期2',
   '生命周期（widget、state）',
   'Redux',
@@ -150,8 +154,27 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  _findPage(var fun) {
+    if ("Hero动画" == fun) {
+      return new SourceHeroPage();
+    }
+    return null;
+  }
+
   _itemClick(index) {
     print('item click:' + '$index:' + funcList[index]);
+
+    var findPage = _findPage(funcList[index]);
+    if(findPage != null) {
+      Navigator.push(
+        context,
+        new MaterialPageRoute(
+          builder: (context) => findPage,
+        ),
+      );
+      return;
+    }
+
     switch (funcList[index]) {
       case '页面跳转':
         {
@@ -294,6 +317,15 @@ class _MyHomePageState extends State<MyHomePage> {
           );
           break;
         }
+      case '贝塞尔曲线':{
+        Navigator.push(
+          context,
+          new MaterialPageRoute(
+            builder: (context) => new HomeClipPage(),
+          ),
+        );
+        break;
+      }
     }
   }
 
