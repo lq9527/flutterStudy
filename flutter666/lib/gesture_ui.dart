@@ -30,6 +30,7 @@ class _MySecondPageState extends State<SecondHomePage> {
       children: <Widget>[
         GestureDetector(
             child: Container(
+                /*margin: EdgeInsets.fromLTRB(_x, _y, 0, 0),*/
                 width: 500,
                 height: 1000,
                 decoration: new BoxDecoration(
@@ -50,6 +51,11 @@ class _MySecondPageState extends State<SecondHomePage> {
             )),
       ],
     );
+  }
+  @override
+  void didUpdateWidget(SecondHomePage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    print("test didUpdateWidget ");
   }
 }
 

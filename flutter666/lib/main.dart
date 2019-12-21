@@ -7,6 +7,7 @@ import 'package:flutter666/page/RenderObjectPage.dart';
 import 'package:flutter666/page_async.dart';
 import 'package:flutter666/page_dart_study.dart';
 import 'package:flutter666/page_lifecyle.dart';
+import 'package:flutter666/page_lifecyle2.dart';
 import 'package:flutter666/page_ui.dart';
 import 'package:flutter666/redus/main_redux.dart';
 import 'package:flutter666/redus/states/count_state.dart';
@@ -22,6 +23,7 @@ import 'net.dart';
 
 void main() => runApp(MyApp());
 var funcList = [
+  '生命周期2',
   '生命周期（widget、state）',
   'Redux',
   'RenderObjectPage',
@@ -273,6 +275,15 @@ class _MyHomePageState extends State<MyHomePage> {
           runApp(new MyReduxApp(store));
           break;
         }
+      case '生命周期2':{
+        Navigator.push(
+          context,
+          new MaterialPageRoute(
+            builder: (context) => new Page_LifeCycle2(),
+          ),
+        );
+        break;
+      }
       case '生命周期（widget、state）':
         {
           Navigator.push(
