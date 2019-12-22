@@ -5,9 +5,12 @@ import android.util.Log;
 import android.view.View;
 
 
+import com.example.flutter666.plugin.MyViewFlutterPlugin;
+
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
+import io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugins.GeneratedPluginRegistrant;
@@ -21,15 +24,18 @@ public class MainActivity extends FlutterActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Log.d("flutter", "MainActivity onCreate:" + this);
     }
 
     @Override
     public void configureFlutterEngine(FlutterEngine flutterEngine) {
         super.configureFlutterEngine(flutterEngine);
-
         GeneratedPluginRegistrant.registerWith(flutterEngine);
+
+
+        ShimPluginRegistry shimPluginRegistry = new ShimPluginRegistry(flutterEngine);
+        MyViewFlutterPlugin.registerWith(shimPluginRegistry);
+
         /*new MethodChannel(getFlutterView(), "").setMethodCallHandler(
                 new MethodChannel.MethodCallHandler() {
                     @Override

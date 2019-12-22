@@ -9,4 +9,11 @@
 
 
 # InheritedWidget
-#
+#   状态管理
+     Scoped_Model
+     Redux
+     BLoC
+     BLoC Provider模式
+     Google-Provide
+     fish-redux
+     Provider

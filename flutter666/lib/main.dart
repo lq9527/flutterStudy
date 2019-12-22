@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'dart:math';
 
 import 'package:battery/battery.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +17,9 @@ import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'HomeClipPage.dart';
+import 'KeyStudyPage.dart';
+import 'KeyStudyPage2.dart';
+import 'PlatformViewPage.dart';
 import 'animation.dart';
 import 'custom_painter.dart';
 import 'gesture_ui.dart';
@@ -25,6 +29,8 @@ import 'net.dart';
 
 void main() => runApp(MyApp());
 var funcList = [
+  'PlatformView',
+  '什么时候使用Key',
   'Hero动画',
   '贝塞尔曲线',
   '生命周期2',
@@ -157,6 +163,10 @@ class _MyHomePageState extends State<MyHomePage> {
   _findPage(var fun) {
     if ("Hero动画" == fun) {
       return new SourceHeroPage();
+    } else if ('什么时候使用Key' == fun) {
+      return new KeyStudyPage();
+    } else if ('PlatformView' == fun) {
+      return new PlatformViewPage();
     }
     return null;
   }
@@ -165,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
     print('item click:' + '$index:' + funcList[index]);
 
     var findPage = _findPage(funcList[index]);
-    if(findPage != null) {
+    if (findPage != null) {
       Navigator.push(
         context,
         new MaterialPageRoute(
@@ -298,15 +308,16 @@ class _MyHomePageState extends State<MyHomePage> {
           runApp(new MyReduxApp(store));
           break;
         }
-      case '生命周期2':{
-        Navigator.push(
-          context,
-          new MaterialPageRoute(
-            builder: (context) => new Page_LifeCycle2(),
-          ),
-        );
-        break;
-      }
+      case '生命周期2':
+        {
+          Navigator.push(
+            context,
+            new MaterialPageRoute(
+              builder: (context) => new Page_LifeCycle2(),
+            ),
+          );
+          break;
+        }
       case '生命周期（widget、state）':
         {
           Navigator.push(
@@ -317,15 +328,16 @@ class _MyHomePageState extends State<MyHomePage> {
           );
           break;
         }
-      case '贝塞尔曲线':{
-        Navigator.push(
-          context,
-          new MaterialPageRoute(
-            builder: (context) => new HomeClipPage(),
-          ),
-        );
-        break;
-      }
+      case '贝塞尔曲线':
+        {
+          Navigator.push(
+            context,
+            new MaterialPageRoute(
+              builder: (context) => new HomeClipPage(),
+            ),
+          );
+          break;
+        }
     }
   }
 
