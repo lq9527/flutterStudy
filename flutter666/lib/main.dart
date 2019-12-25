@@ -17,6 +17,7 @@ import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'HomeClipPage.dart';
+import 'InheritedWidgetPage.dart';
 import 'KeyStudyPage.dart';
 import 'KeyStudyPage2.dart';
 import 'PlatformViewPage.dart';
@@ -24,11 +25,13 @@ import 'animation.dart';
 import 'custom_painter.dart';
 import 'gesture_ui.dart';
 import 'hero/basic_structure_hero.dart';
+import 'inheritedWidgetDemo.dart';
 import 'layout_ui.dart';
 import 'net.dart';
 
 void main() => runApp(MyApp());
 var funcList = [
+  'InheritedWidget',
   'PlatformView',
   '什么时候使用Key',
   'Hero动画',
@@ -338,6 +341,17 @@ class _MyHomePageState extends State<MyHomePage> {
           );
           break;
         }
+      case 'InheritedWidget':
+        {
+          Navigator.push(
+            context,
+            new MaterialPageRoute(
+              builder: (context) => new MyTree/*MyParentWidget*/(),
+            ),
+          );
+          break;
+        }
+
     }
   }
 
