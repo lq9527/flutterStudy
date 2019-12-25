@@ -13,6 +13,7 @@ import 'package:flutter666/page_ui.dart';
 import 'package:flutter666/redus/main_redux.dart';
 import 'package:flutter666/redus/states/count_state.dart';
 import 'package:flutter666/second_page.dart';
+import 'package:provider/provider.dart';
 import 'package:redux/redux.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -21,6 +22,7 @@ import 'InheritedWidgetPage.dart';
 import 'KeyStudyPage.dart';
 import 'KeyStudyPage2.dart';
 import 'PlatformViewPage.dart';
+import 'ProviderPage.dart';
 import 'animation.dart';
 import 'custom_painter.dart';
 import 'gesture_ui.dart';
@@ -31,6 +33,7 @@ import 'net.dart';
 
 void main() => runApp(MyApp());
 var funcList = [
+  'Provider',
   'InheritedWidget',
   'PlatformView',
   '什么时候使用Key',
@@ -346,12 +349,20 @@ class _MyHomePageState extends State<MyHomePage> {
           Navigator.push(
             context,
             new MaterialPageRoute(
-              builder: (context) => new MyTree/*MyParentWidget*/(),
+              builder: (context) => new MyTree /*MyParentWidget*/ (),
             ),
           );
           break;
         }
 
+      case 'Provider':
+        {
+          runApp(ChangeNotifierProvider<Counter>.value(
+            notifier: Counter(1),
+            child: ProviderDemoPage(),
+          ));
+          break;
+        }
     }
   }
 
