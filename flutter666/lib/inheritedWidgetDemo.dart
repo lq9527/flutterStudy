@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Item {
   String reference;
+
   Item(this.reference);
 }
 
@@ -24,29 +25,39 @@ class MyInheritedWidget extends StatefulWidget {
   MyInheritedWidget({
     Key key,
     this.child,
-  }): super(key: key);
+  }) : super(key: key);
 
   final Widget child;
 
   @override
   MyInheritedWidgetState createState() => new MyInheritedWidgetState();
 
-  static MyInheritedWidgetState of(BuildContext context){
+  /*static MyInheritedWidgetState of(BuildContext context){
     return (context.inheritFromWidgetOfExactType(_MyInherited) as _MyInherited).data;
+  }
+*/
+  static MyInheritedWidgetState of(
+      [BuildContext context, bool rebuild = true]) {
+    return (rebuild
+            ? context.inheritFromWidgetOfExactType(_MyInherited) as _MyInherited
+            : context.ancestorWidgetOfExactType(_MyInherited) as _MyInherited)
+        .data;
   }
 }
 
-class MyInheritedWidgetState extends State<MyInheritedWidget>{
+class MyInheritedWidgetState extends State<MyInheritedWidget> {
   List<Item> _items = <Item>[];
+
   int get itemsCount => _items.length;
-  void addItem(String reference){
-    setState((){
+
+  void addItem(String reference) {
+    setState(() {
       _items.add(new Item(reference));
     });
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return new _MyInherited(
       data: this,
       child: widget.child,
@@ -90,7 +101,7 @@ class WidgetA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('test Inherited WidgetA build');
-    final MyInheritedWidgetState state = MyInheritedWidget.of(context);
+    final MyInheritedWidgetState state = MyInheritedWidget.of(context,false);
     return new Container(
       child: new RaisedButton(
         child: new Text('Add Item'),
