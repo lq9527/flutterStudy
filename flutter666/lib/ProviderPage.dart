@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(ChangeNotifierProvider<Counter>.value(
-    notifier: Counter(1),
+    value: Counter(1),
     child: ProviderDemoPage(),
   ));
 }

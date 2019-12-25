@@ -358,7 +358,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case 'Provider':
         {
           runApp(ChangeNotifierProvider<Counter>.value(
-            notifier: Counter(1),
+            value: Counter(1),
             child: ProviderDemoPage(),
           ));
           break;
