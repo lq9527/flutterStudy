@@ -23,6 +23,7 @@ import 'KeyStudyPage.dart';
 import 'KeyStudyPage2.dart';
 import 'PlatformViewPage.dart';
 import 'ProviderPage.dart';
+import 'SyncPage.dart';
 import 'animation.dart';
 import 'custom_painter.dart';
 import 'gesture_ui.dart';
@@ -33,6 +34,7 @@ import 'net.dart';
 
 void main() => runApp(MyApp());
 var funcList = [
+  '异步dart',
   'Provider',
   'InheritedWidget',
   'PlatformView',
@@ -354,13 +356,17 @@ class _MyHomePageState extends State<MyHomePage> {
           );
           break;
         }
-
       case 'Provider':
         {
           runApp(ChangeNotifierProvider<Counter>.value(
             value: Counter(1),
             child: ProviderDemoPage(),
           ));
+          break;
+        }
+      case '异步dart':
+        {
+          runApp(new SyncPage());
           break;
         }
     }
